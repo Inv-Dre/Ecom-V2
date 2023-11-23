@@ -1,10 +1,11 @@
 import { Outlet } from 'react-router-dom';
-import HomePage from './pages/homePage';
+import Nav from './components/nav';
 
 function App() {
     return (
         <div>
-            <HomePage></HomePage>
+            <Nav />
+            <Outlet />
         </div>
     )
 }

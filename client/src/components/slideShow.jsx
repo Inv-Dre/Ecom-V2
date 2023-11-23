@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './slideShow.css'
 const colors = ["#0088FE", "#00C49F", "#FFBB28"];
 const delay = 2500;
 
