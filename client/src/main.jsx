@@ -10,7 +10,8 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import App from './App.jsx'
 import HomePage from './pages/homePage.jsx'
 import ErrorPage from './pages/errorPage.jsx'
-import LoginForm from './pages/loginPage.jsx'
+import LoginPage from './pages/loginPage.jsx'
+import ProfilePage from './pages/profilePage.jsx'
 // Define the accessible routes, and which components respond to which URL
 const router = createBrowserRouter([
   {
@@ -23,12 +24,12 @@ const router = createBrowserRouter([
         element: <HomePage />,
       },
       {
-        path: "slideShow",
-        element: <HomePage />,
+        path: "profilePage",
+        element: <ProfilePage />,
       },
       {
         path: "login",
-        element: <LoginForm />,
+        element: <LoginPage />,
       }
     ],
   },
