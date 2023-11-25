@@ -1,60 +1,37 @@
-import React from 'react';
-import './slideShow.css'
-const colors = ["#0088FE", "#00C49F", "#FFBB28"];
-const delay = 2500;
+import Carousel from "react-bootstrap/Carousel";
+import Image from "react-bootstrap/Image";
+import jewelryImage from "../assets/jewelery_stock.jpg";
+import lawnMowerImage from "../assets/lawnmower_stock.jpg";
+import tennisRacketImage from "../assets/tenni_racket_stock.jpg";
+import './slideShow.css';
 
 function Slideshow() {
-  const [index, setIndex] = React.useState(0);
-  const timeoutRef = React.useRef(null);
-
-  function resetTimeout() {
-    if (timeoutRef.current) {
-      clearTimeout(timeoutRef.current);
-    }
-  }
-
-  React.useEffect(() => {
-    resetTimeout();
-    timeoutRef.current = setTimeout(
-      () =>
-        setIndex((prevIndex) =>
-          prevIndex === colors.length - 1 ? 0 : prevIndex + 1
-        ),
-      delay
-    );
-
-    return () => {
-      resetTimeout();
-    };
-  }, [index]);
-
   return (
-    <div className="slideshow">
-      <div
-        className="slideshowSlider"
-        style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}
-      >
-        {colors.map((backgroundColor, index) => (
-          <div
-            className="slide"
-            key={index}
-            style={{ backgroundColor }}
-          ></div>
-        ))}
-      </div>
-
-      <div className="slideshowDots">
-        {colors.map((_, idx) => (
-          <div
-            key={idx}
-            className={`slideshowDot${index === idx ? " active" : ""}`}
-            onClick={() => {
-              setIndex(idx);
-            }}
-          ></div>
-        ))}
-      </div>
-    </div>
+    <Carousel>
+      <Carousel.Item className="slide">
+        <Image className="image" src={jewelryImage} fluid />
+        <Carousel.Caption>
+          <h3>First slide label</h3>
+          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+        <Image className="image" src={lawnMowerImage} fluid />
+        <Carousel.Caption>
+          <h3>Second slide label</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+        <Image className="image" src={tennisRacketImage} fluid />
+        <Carousel.Caption>
+          <h3>Third slide label</h3>
+          <p>
+            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+          </p>
+        </Carousel.Caption>
+      </Carousel.Item>
+    </Carousel>
   );
 }
 
