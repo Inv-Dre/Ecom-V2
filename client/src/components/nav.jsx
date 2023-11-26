@@ -8,13 +8,13 @@ function Nav() {
     <>
       <NavLinks 
       links={[
-        <Link key={1} className="nav-link text-light" to="/">
+        <Link key={1} className="nav-link text-dark" to="/">
           Home
         </Link>,
-        <Link key={2} className="nav-link text-light" to="/profilePage">
+        <Link key={2} className="nav-link text-dark" to="/profilePage">
           Profile Page
         </Link>,
-        <Link key={3} className="nav-link text-light" to="/login">
+        <Link key={3} className="nav-link text-dark" to="/login">
         Login/LogOut
       </Link>,
       ]}
