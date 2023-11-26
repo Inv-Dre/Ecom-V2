@@ -1,0 +1,14 @@
+.product-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 30px; /* Adjust margin as needed */
+  }
+  .product-card {
+    margin: 30px;
+    
+}
+.card-btn {
+    width: auto; /* Adjust the width as needed */
+  }
+

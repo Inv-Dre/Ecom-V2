@@ -1,4 +1,22 @@
 {
+<<<<<<< HEAD
+    "name": "mern-shopping",
+    "version": "1.0.0",
+    "description": "",
+    "main": "server/server.js",
+    "scripts": {
+      "start": "node server --ignore client",
+      "develop": "concurrently \"cd server && npm run start\" \"cd client && npm run dev\"",
+      "install": "cd server && npm i && cd ../client && npm i",
+      "seed": "cd server && npm run seed",
+      "build": "cd client && npm run build"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+      "concurrently": "^5.1.0"
+=======
     "name": "client",
     "private": true,
     "version": "0.0.0",
@@ -27,5 +45,6 @@
       "eslint-plugin-react-hooks": "^4.6.0",
       "eslint-plugin-react-refresh": "^0.3.4",
       "vite": "^4.3.2"
+>>>>>>> e59116efa56f6d6b8cfedc57987e1fd68d15d2f5
     }
   }

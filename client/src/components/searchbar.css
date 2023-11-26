@@ -1,0 +1,36 @@
+/* search bar */
+.btn-success {
+  display: flex;
+  background-color: blue;
+  justify-content: end;
+  width: "90%";
+}
+.btn-success:hover {
+  background-color: #0000ff8f;
+}
+.btn-success:click {
+  background-color: #0000ff8f;
+}
+
+.searchbar {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 700px; /* Adjust the width as needed */
+  margin: 10px; /* Adjust margin as needed */
+}
+
+/* Style for the input inside the button */
+.searchbar input {
+  width: 100%;
+  border: none;
+  outline: none;
+}
+
+.btn-primary {
+  width: 600px; /* Adjust the width as needed */
+}
+#dropdown-split-basic {
+  width: 50px;
+}
