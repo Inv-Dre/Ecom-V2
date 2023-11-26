@@ -1,50 +1,19 @@
 {
-<<<<<<< HEAD
-    "name": "mern-shopping",
-    "version": "1.0.0",
-    "description": "",
-    "main": "server/server.js",
-    "scripts": {
-      "start": "node server --ignore client",
-      "develop": "concurrently \"cd server && npm run start\" \"cd client && npm run dev\"",
-      "install": "cd server && npm i && cd ../client && npm i",
-      "seed": "cd server && npm run seed",
-      "build": "cd client && npm run build"
-    },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
-    "devDependencies": {
-      "concurrently": "^5.1.0"
-=======
-    "name": "client",
-    "private": true,
-    "version": "0.0.0",
-    "type": "module",
-    "scripts": {
-      "dev": "vite",
-      "build": "vite build",
-      "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-      "preview": "vite preview"
-    },
-    "dependencies": {
-      "@apollo/client": "^3.7.14",
-      "graphql": "^16.6.0",
-      "react": "^18.2.0",
-      "react-dom": "^18.2.0",
-      "react-router-dom": "^6.11.2",
-      "@tailwindcss/forms": "^0.5.0",
-      "tailwindcss": "^3.0.24"
-    },
-    "devDependencies": {
-      "@types/react": "^18.0.28",
-      "@types/react-dom": "^18.0.11",
-      "@vitejs/plugin-react": "^4.0.0",
-      "eslint": "^8.38.0",
-      "eslint-plugin-react": "^7.32.2",
-      "eslint-plugin-react-hooks": "^4.6.0",
-      "eslint-plugin-react-refresh": "^0.3.4",
-      "vite": "^4.3.2"
->>>>>>> e59116efa56f6d6b8cfedc57987e1fd68d15d2f5
-    }
+  "name": "mern-shopping",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm run dev\"",
+    "install": "cd server && npm i && cd ../client && npm i",
+    "seed": "cd server && npm run seed",
+    "build": "cd client && npm run build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^5.1.0"
   }
+}
