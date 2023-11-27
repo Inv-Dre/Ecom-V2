@@ -34,7 +34,7 @@ type Query{
     # users: [User]!
     # user(userId: ID!): User
     me: User
-    getProducts(limit:Int):[Product]
+    products(limit:Int):[Product]
     getProduct(productId: String!): Product!
 }
 

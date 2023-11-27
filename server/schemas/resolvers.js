@@ -16,7 +16,7 @@ const resolvers = {
             console.log(error)
         }
         },
-        getProducts: async (parent, {limit}) => {
+        products: async (parent, {limit}) => {
             try{
                 const products = await Product.find().limit(limit);
                 return products
