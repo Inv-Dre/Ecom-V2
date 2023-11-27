@@ -51,7 +51,7 @@ const resolvers = {
         }
         },
 
-        addCart: async (parent, {input}, context ) => {
+        addToCart: async (parent, {input}, context ) => {
             try{
             if (context.user){
                 return User.findOneAndUpdate(
@@ -70,7 +70,7 @@ const resolvers = {
         }
         },
 
-        removeCart: async (parent, {productId}, context ) => {
+        removeFromCart: async (parent, {productId}, context ) => {
             try{
             if (context.user){
                 return User.findOneAndUpdate(
