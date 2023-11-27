@@ -11,9 +11,11 @@ function Nav() {
         <Link key={1} className="nav-link text-dark" to="/">
           Home
         </Link>,
+         Auth.loggedIn (
         <Link key={2} className="nav-link text-dark" to="/profilePage">
           Profile Page
-        </Link>,
+        </Link>
+         ),
         <Link key={3} className="nav-link text-dark" to="/login">
         Login/LogOut
       </Link>,
