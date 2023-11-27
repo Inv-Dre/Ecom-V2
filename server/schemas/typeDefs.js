@@ -8,7 +8,6 @@ type User{
     cart: [Product]
 }
 input AddCartInput {
-    _id: ID!
     productName:String!
     quantity:String!
     price:String! 
@@ -18,7 +17,6 @@ input AddCartInput {
   }
 
 type Product{
-    _id: ID!
     productName:String!
     quantity:String!
     price:String! 
