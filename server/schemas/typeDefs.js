@@ -39,7 +39,7 @@ type Query{
 type Mutation{
     login(email: String!, password: String!): Auth
     addUser(username:String!, email: String!, password: String!): Auth
-    addtoCart(input:AddCartInput!): User
+    addToCart(input:AddCartInput!): User
     removeFromCart(productId: ID!):User
 }
 `;

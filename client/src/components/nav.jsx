@@ -17,6 +17,9 @@ function Nav() {
         <Link key={3} className="nav-link text-dark" to="/login">
         Login/LogOut
       </Link>,
+      <Link key={4} className="nav-link text-dark" to="/cartPage">
+         MyCart 
+         </Link>,
       ]}
     />
     </>
