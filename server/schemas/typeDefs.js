@@ -14,7 +14,7 @@ input AddCartInput {
     price:String! 
     description:String!
     image: String
-    productId: String   
+    productId: String!  
   }
 
 type Product{
@@ -24,7 +24,7 @@ type Product{
     price:String! 
     description:String!
     image: String 
-    productId: String 
+    productId: String!
 }
 
 type Auth{
