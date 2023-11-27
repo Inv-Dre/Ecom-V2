@@ -16,6 +16,22 @@ const resolvers = {
             console.log(error)
         }
         },
+        getProducts: async (parent, {limit}) => {
+            try{
+                const products = await Product.find().limit(limit);
+                return products
+            }catch (error){
+                console.log(error)
+            }
+        },
+        getProduct: async (parent,{productId}) => {
+            try{
+                const product = await Product.findById(productId);
+                return product
+            }catch (error){
+                console.log(error)
+            }
+        }
     },
 
     Mutation: {

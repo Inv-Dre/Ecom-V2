@@ -34,6 +34,8 @@ type Query{
     # users: [User]!
     # user(userId: ID!): User
     me: User
+    getProducts(limit:Int):[Product]
+    getProduct(productId:ID!): Product!
 }
 
 type Mutation{
