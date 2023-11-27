@@ -26,7 +26,7 @@ const resolvers = {
         },
         getProduct: async (parent,{productId}) => {
             try{
-                const product = await Product.findById(productId);
+                const product = await Product.findOne({productId});
                 return product
             }catch (error){
                 console.log(error)

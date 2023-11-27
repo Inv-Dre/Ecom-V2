@@ -13,7 +13,7 @@ input AddCartInput {
     price:String! 
     description:String!
     image: String
-    productId: String!  
+    productId: String!
   }
 
 type Product{
@@ -35,7 +35,7 @@ type Query{
     # user(userId: ID!): User
     me: User
     getProducts(limit:Int):[Product]
-    getProduct(productId:ID!): Product!
+    getProduct(productId: String!): Product!
 }
 
 type Mutation{
