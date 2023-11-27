@@ -7,13 +7,14 @@ type User{
     productCount: Int
     cart: [Product]
 }
-input cartInput {
+input AddCartInput {
     _id: ID!
     productName:String!
     quantity:String!
     price:String! 
     description:String!
-    image: String   
+    image: String
+    productId: String   
   }
 
 type Product{
@@ -22,7 +23,8 @@ type Product{
     quantity:String!
     price:String! 
     description:String!
-    image: String   
+    image: String 
+    productId: String 
 }
 
 type Auth{
@@ -39,7 +41,7 @@ type Query{
 type Mutation{
     login(email: String!, password: String!): Auth
     addUser(username:String!, email: String!, password: String!): Auth
-    addCart(input:cartInput!): User
+    addCart(input:AddCartInput!): User
     removeCart(_id: ID!):User
 }
 `;

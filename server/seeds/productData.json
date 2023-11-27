@@ -1,0 +1,19 @@
+
+[
+    {
+       "productName": "Amazon Fire TV 50 inch 4-Series 4K UHD smart TV, stream live TV without cable",
+       "quantity": "250",
+       "price":"298.99",
+       "description":"Display Size:50 inches Refresh Rate:60 hertz Resolution:4K  Model Year:2021",
+       "image":"../../client/src/assets/amazon_fire_tv.jpg",
+       "productId":"1"
+    },
+    {
+        "productName": "Crocs",
+        "quantity":"1000",
+        "price":"32.86",
+        "description":"Black Unisex-Adult Classic Clogs",
+        "image":"../../client/src/assets/black_crocs.jpg",
+        "productId":"2"
+    }
+]
