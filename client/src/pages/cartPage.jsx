@@ -52,7 +52,7 @@ const CartPage = () => {
     <>
       <div fluid className="text-light bg-dark p-5">
         <Container>
-          <h1>Viewing saved books!</h1>
+          <h1>Viewing saved Products!</h1>
         </Container>
       </div>
       <Container>
@@ -62,11 +62,11 @@ const CartPage = () => {
             : 'You have no cart items!'}
         </h2>
         <Row>
-          {userData.cart.map((product) => {
+          { userData.cart && userData.cart.map((product) => {
             return (
               <Col md="4">
                 <Card key={product.productId} border='dark'>
-                  {product.image ? <Card.Img src={product.image} alt={`The cover for ${product.productName}`} variant='top' /> : null}
+                  {product.image ? <Card.Img src={product.image} alt={`The image for ${product.productName}`} variant='top' /> : null}
                   <Card.Body>
                     <Card.Title>{product.productName}</Card.Title>
                     <p className='small'>Price: {product.price}</p>
