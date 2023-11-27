@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import NavLinks from './navLinks';
 import "./nav.css";
-
+import Auth from '../utils/auth'
 // In our return method, we use the map method to return a new array of `li` and `img` elements that are specific to each search result
 function Nav() {
   return (
@@ -17,9 +17,11 @@ function Nav() {
         <Link key={3} className="nav-link text-dark" to="/login">
         Login/LogOut
       </Link>,
+      Auth.loggedIn (
       <Link key={4} className="nav-link text-dark" to="/cartPage">
-         MyCart 
-         </Link>,
+         My Cart 
+         </Link>
+      ),
       ]}
     />
     </>
