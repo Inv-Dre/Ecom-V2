@@ -1,6 +1,10 @@
 /* Slideshow */
-
-.slideshow {
+.flex-container {
+  display: flex;
+  flex-wrap:wrap;
+  justify-content: center;
+}
+/* .slideshow {
   margin: 0 auto;
   overflow: hidden;
   max-width: 500px;
@@ -17,10 +21,10 @@
   height: 400px;
   width: 100%;
   border-radius: 40px;
-}
+} */
 
 /* slide-show Buttons */
-
+/* 
 .slideshowDots {
   text-align: center;
 }
@@ -39,10 +43,10 @@
 
 .slideshowDot.active {
   background-color: #6a0dad;
-}
+} */
 
 /* search bar */
-.btn-success {
+/* .btn-success {
   background-color: blue;
   justify-content: end;
   width: "90%";
@@ -52,4 +56,4 @@
 }
 .btn-success:click {
   background-color: #0000ff8f;
-}
+} */

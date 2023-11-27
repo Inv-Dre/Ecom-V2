@@ -1,6 +1,6 @@
 import ReactDOM from 'react-dom/client'
 import 'bootstrap/dist/css/bootstrap.css'
-
+import './App.css'
 
 // Import the required Provider component and createBrowserRouter helper function
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'

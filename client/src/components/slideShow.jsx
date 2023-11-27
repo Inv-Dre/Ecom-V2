@@ -7,7 +7,7 @@ import './slideShow.css';
 
 function Slideshow() {
   return (
-    <Carousel>
+    <Carousel className="carouselText">
       <Carousel.Item className="slide">
         <Image className="image" src={jewelryImage} fluid />
         <Carousel.Caption>

@@ -18,7 +18,7 @@
  .carousel-inner { /*slideshowSlider */
   white-space: nowrap;
   transition: ease 1000ms;
-  background-color: black;
+  background-color: blue;
 }
 
  .carousel-item { /*slide */
@@ -26,7 +26,7 @@
   height: 200px;
   width: 100%;
   border-radius: 40px;
-  background-color: yellow;
+  background-color: lightblue;
 }
 
 /* Buttons */
@@ -35,6 +35,7 @@
   text-align: center;
   background-color: blue;
 }
+
 /*
 button {
   display: inline-block;
