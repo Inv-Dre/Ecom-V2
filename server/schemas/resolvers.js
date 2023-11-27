@@ -43,9 +43,11 @@ const resolvers = {
             if(!correctPw){
                 throw AuthenticationError;
             }
-
+           
             const token = signToken(user);
+            console.log(user,"user");
             return {token, user};
+            
         } catch (error){
             console.log(error)
         }

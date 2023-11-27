@@ -1,46 +1,56 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
-import {Nav, Modal, Tab} from 'react-bootstrap';
+import { Nav, Modal, Tab } from 'react-bootstrap';
 import NavLinks from './navLinks';
 import { useState } from 'react';
 import "./nav.css";
-import Auth from '../utils/auth'
+import Auth from '../utils/auth';
 import LoginForm from './LoginForm';
 import SignUpForm from './SignupForm';
 
-// In our return method, we use the map method to return a new array of `li` and `img` elements that are specific to each search result
-function NavBar() {  
-
+function NavBar() {
   const [showModal, setShowModal] = useState(false);
+  const isAuthenticated = Auth.loggedIn();
+
+  const handleLogout = () => {
+    Auth.logout();
+    // Additional logic if needed, e.g., redirect to another page
+  };
 
   return (
     <>
       <NavLinks 
-      links={[
-        <Link key={1} className="nav-link text-dark" to="/">
-          Home
-        </Link>,
-         Auth.loggedIn (
-        <Link key={2} className="nav-link text-dark" to="/profilePage">
-          Profile Page
-        </Link>
-         ),
-        <Link key={3} className="nav-link text-dark" onClick={() => setShowModal(true)} >
-        Login/LogOut
-      </Link>,
-      Auth.loggedIn (
-      <Link key={4} className="nav-link text-dark" to="/cartPage">
-         My Cart 
-         </Link>
-      ),
-      
-      ]}
-    />
+        links={[
+          <Link key={1} className="nav-link text-dark" to="/">
+            Home
+          </Link>,
+          isAuthenticated ? (
+            <Link key={2} className="nav-link text-dark" to="/profilePage">
+              Profile Page
+            </Link>
+          ) : null,
+          isAuthenticated ? (
+            <Link key={3} className="nav-link text-dark" onClick={handleLogout}>
+              Logout
+            </Link>
+          ) : (
+            <Link key={3} className="nav-link text-dark" onClick={() => setShowModal(true)}>
+              Login/SignUp
+            </Link>
+          ),
+          isAuthenticated ? (
+            <Link key={4} className="nav-link text-dark" to="/cartPage">
+              My Cart
+            </Link>
+          ) : null,
+        ]}
+      />
+
       <Modal
         size='lg'
         show={showModal}
         onHide={() => setShowModal(false)}
         aria-labelledby='signup-modal'>
-        {/* tab container to do either signup or login component */}
         <Tab.Container defaultActiveKey='login'>
           <Modal.Header closeButton>
             <Modal.Title id='signup-modal'>
