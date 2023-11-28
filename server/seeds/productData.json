@@ -15,5 +15,31 @@
         "description":"Black Unisex-Adult Classic Clogs",
         "image":"https://m.media-amazon.com/images/I/81Vekenn4lL._AC_SX695_.jpg",
         "productId":"2"
+    },
+    {
+        "productName": "MSI - NVIDIA GeForce RTX 3060 Ventus 3X ",
+        "quantity":"450",
+        "price":"299.99",
+        "description":"12G OC - 12GB GDDR6 - PCI Express 4.0 - Graphics Card - Black",
+        "image":"https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6452/6452940_sd.jpg;maxHeight=640;maxWidth=550",
+        "productId":"3"
+        
+
+    },
+    {
+      "productName":  "CyberPowerPC - Gamer Master Gaming Desktop - AMD Ryzen 5 7600",
+      "quantity":"250",
+      "price":"899.99",
+      "description":" 16GB Memory - NVIDIA GeForce RTX 4060 8GB - 2TB SSD - White",
+      "image":"https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6553/6553002_rd.jpg;maxHeight=640;maxWidth=550",
+      "productId":"4"
+    },
+    {
+        "productName": "test mouse",
+        "quantity":"2000",
+        "price":"25.00",
+        "description":"basic black mouse without any extra buttons",
+        "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQwNLo9eimG4WW924fnZEOMvu7dBP0FiXXMqs7XrfcnMzW7aYNIbdDTzUXSdIu7dBXI2A&usqp=CAU",
+        "productId":"5"
     }
 ]
