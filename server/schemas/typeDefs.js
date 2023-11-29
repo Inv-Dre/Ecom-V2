@@ -6,6 +6,7 @@ type User{
     password: String! 
     productCount: Int
     cart: [Product]
+    orders: [Order]
 }
 input AddCartInput {
     productName:String!
@@ -15,7 +16,15 @@ input AddCartInput {
     image: String
     productId: String!
   }
-
+type Category {
+    _id: ID
+    name: String
+}
+type Order {
+    _id: ID
+    purchaseDate: String
+    products: [Product]
+}
 type Product{
     productName:String!
     quantity:String!
@@ -23,6 +32,7 @@ type Product{
     description:String!
     image: String 
     productId: String!
+    category: Category
 }
 
 type Auth{
@@ -36,6 +46,9 @@ type Query{
     me: User
     products(limit:Int):[Product]
     getProduct(productId: String!): Product!
+    categories: [Category]
+    order(_id: ID!): Order
+    catProducts(category: ID, name: String): [Product]
 }
 
 type Mutation{
@@ -43,6 +56,7 @@ type Mutation{
     addUser(username:String!, email: String!, password: String!): Auth
     addToCart(input:AddCartInput!): User
     removeFromCart(productId: ID!):User
+    addOrder(products: [ID]!): Order
 }
 `;
 module.exports = typeDefs;

@@ -1,4 +1,4 @@
-const { User, Product } = require('../models');
+const { User, Product, Order, Category } = require('../models');
 const { signToken, AuthenticationError } = require('../utils/auth');
 
 
@@ -9,7 +9,13 @@ const resolvers = {
         me: async (parent, args, context) =>{
             try{
             if(context.user){
-              return await User.findOne({ _id: context.user._id});
+              const user = await User.findOne({ _id: context.user._id}).populate({
+                path: 'orders.products',
+                populate: 'category',
+              });
+
+              user.orders.sort((a, b) => b.purchaseDate - a.purchaseDate);
+              return user
             }
             throw AuthenticationError;
         } catch (error){
@@ -31,7 +37,37 @@ const resolvers = {
             }catch (error){
                 console.log(error)
             }
-        }
+        },
+        catProducts: async (parent, { category, name }) => {
+            const params = {};
+      
+            if (category) {
+              params.category = category;
+            }
+      
+            if (name) {
+              params.name = {
+                $regex: name,
+              };
+            }
+      
+            return await Product.find(params).populate('category');
+          },
+        categories: async () => {
+            return await Category.find();
+          },
+        order: async (parent, { _id }, context) => {
+            if (context.user) {
+              const user = await User.findById(context.user._id).populate({
+                path: 'orders.products',
+                populate: 'category',
+              });
+      
+              return user.orders.id(_id);
+            }
+      
+            throw AuthenticationError;
+          },
     },
 
     Mutation: {
@@ -101,6 +137,28 @@ const resolvers = {
             console.log(error)
         }
         },
+        addOrder: async (parent, { products }, context) => {
+            if (context.user) {
+              const order = new Order({ products });
+      
+              await User.findByIdAndUpdate(context.user._id, {
+                $push: { orders: order },
+              });
+      
+              return order;
+            }
+      
+            throw AuthenticationError;
+          },
+          updateProduct: async (parent, { _id, quantity }) => {
+            const decrement = Math.abs(quantity) * -1;
+      
+            return await Product.findByIdAndUpdate(
+              _id,
+              { $inc: { quantity: decrement } },
+              { new: true }
+            );
+          },
     }
 };
 

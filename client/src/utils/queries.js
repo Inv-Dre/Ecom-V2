@@ -12,6 +12,19 @@ query me{
         description
         image
         productId
+      } 
+      orders {
+        _id
+        purchaseDate
+        products {
+          _id
+          productName
+          description
+          price
+          quantity
+          image
+          productId
+        }
       }
     }
 }
@@ -26,6 +39,9 @@ query products($limit:Int){
     description
     image
     productId
+    category {
+      name
+    }
   }
 }`
 
@@ -40,3 +56,27 @@ query getProduct($productId: String!){
     productId
   }
 }`
+
+export const QUERY_CATEGORIES = gql`
+  {
+    categories {
+      _id
+      name
+    }
+  }
+`
+export const QUERY_PRODUCTS = gql`
+  query getProducts($category: ID) {
+    catProducts(category: $category) {
+      _id
+      name
+      description
+      price
+      quantity
+      image
+      category {
+        _id
+      }
+    }
+  }
+`;
