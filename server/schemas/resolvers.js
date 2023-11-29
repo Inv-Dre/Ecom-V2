@@ -150,15 +150,15 @@ const resolvers = {
       
             throw AuthenticationError;
           },
-          updateProduct: async (parent, { _id, quantity }) => {
-            const decrement = Math.abs(quantity) * -1;
+          // updateProduct: async (parent, { _id, quantity }) => {
+          //   const decrement = Math.abs(quantity) * -1;
       
-            return await Product.findByIdAndUpdate(
-              _id,
-              { $inc: { quantity: decrement } },
-              { new: true }
-            );
-          },
+          //   return await Product.findByIdAndUpdate(
+          //     _id,
+          //     { $inc: { quantity: decrement } },
+          //     { new: true }
+          //   );
+          // },
     }
 };
 
