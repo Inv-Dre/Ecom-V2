@@ -10,7 +10,7 @@ function ProductCard(props) {
   return (
     <div className="product-container">
       <Card className="product-card" style={{ width: "18rem" }}>
-        <Card.Img variant="top" src={props.image} />
+        <Card.Img className="product-image" variant="top" src={props.image} />
         <Card.Body>
           <Card.Title>{props.productName}</Card.Title>
           <Card.Text> Description: {props.description}

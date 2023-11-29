@@ -11,5 +11,11 @@
 }
 .card-btn {
     width: auto; /* Adjust the width as needed */
-  }
+}
+.product-image{
+    height: 200px;
+    width: 250px;
+    border: 30px solid white;
+    align-items: center;
+}
 

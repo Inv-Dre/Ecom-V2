@@ -2,14 +2,15 @@
 .flex-container {
   display: flex;
   flex-wrap:wrap;
+  color:#3b71ca;
   justify-content: center;
 }
-/* .slideshow {
+ .slideshow {
   margin: 0 auto;
   overflow: hidden;
   max-width: 500px;
 }
-
+/*
 .slideshowSlider {
   white-space: nowrap;
   transition: ease 1000ms;

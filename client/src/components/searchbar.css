@@ -13,12 +13,13 @@
 }
 
 .searchbar {
-  position: fixed;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 700px; /* Adjust the width as needed */
-  margin: 10px; /* Adjust margin as needed */
+  /* position: fixed; */
+  top: -3px;
+  left: 36%;
+  transform: translateX(44%);
+  width: 700px;
+  margin: 5px;
+  margin-top: -46px;
 }
 
 /* Style for the input inside the button */

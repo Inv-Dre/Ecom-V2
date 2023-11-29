@@ -18,14 +18,14 @@
  .carousel-inner { /*slideshowSlider */
   white-space: nowrap;
   transition: ease 1000ms;
-  background-color: blue;
+  background-color: #3b71ca;
 }
 
  .carousel-item { /*slide */
   display: inline-block;
   height: 200px;
   width: 100%;
-  border-radius: 40px;
+  /* border-radius: 40px; */
   background-color: lightblue;
 }
 
@@ -33,7 +33,7 @@
 
 .carousel-indicators {
   text-align: center;
-  background-color: blue;
+  background-color: #3b71ca;
 }
 
 /*
