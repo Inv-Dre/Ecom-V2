@@ -3,23 +3,31 @@
   display: flex;
   background-color: #2f6c8f;
   justify-content: end;
-  width: "90%";
+  /* width: "90%"; */
+  border-color: #2f6c8f
+  ;
 }
 .btn-success:hover {
   background-color: #6f9db5;
+  border-color: #2f6c8f
 }
 .btn-success:click {
   background-color: #6f9db5;
+  border-color: #2f6c8f
 }
 
 .searchbar {
   /* position: fixed; */
-  top: -3px;
-  left: 36%;
+  /* top: -3px;
+  left: 36%; */
   transform: translateX(44%);
   width: 700px;
-  margin: 5px;
+  /* margin: 5px; */
   margin-top: -46px;
+  margin-bottom: 10px;
+  background-color: #2f6c8f;
+  border-color: #2f6c8f;
+  border-width: 10cap;
 }
 
 /* Style for the input inside the button */
@@ -27,10 +35,14 @@
   width: 100%;
   border: none;
   outline: none;
+  border-color: #2f6c8f;
+  margin-bottom: 10px;
 }
 
 .btn-primary {
-  width: 600px; /* Adjust the width as needed */
+  width: 600px; 
+  border-color: #2f6c8f;
+  background-color: #2f6c8f;/* Adjust the width as needed */
 }
 #dropdown-split-basic {
   width: 50px;

@@ -11,6 +11,8 @@
 }
 .card-btn {
     width: auto; /* Adjust the width as needed */
+    background-color: #2f6c8f;
+    border-color: #2f6c8f;
 }
 .product-image{
     height: 200px;

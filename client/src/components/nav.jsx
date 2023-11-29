@@ -55,7 +55,7 @@ function NavBar() {
             <Modal.Title id='signup-modal'>
               <Nav variant='pills'>
                 <Nav.Item>
-                  <Nav.Link eventKey='login'>Login</Nav.Link>
+                  <Nav.Link eventKey='login' id="login-button">Login</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
                   <Nav.Link eventKey='signup'>Sign Up</Nav.Link>
@@ -65,7 +65,7 @@ function NavBar() {
           </Modal.Header>
           <Modal.Body>
             <Tab.Content>
-              <Tab.Pane eventKey='login'>
+              <Tab.Pane eventKey='login' >
                 <LoginForm handleModalClose={() => setShowModal(false)} />
               </Tab.Pane>
               <Tab.Pane eventKey='signup'>

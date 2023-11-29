@@ -1,4 +1,24 @@
 .navbar-expand-lg {
-    /* position: fixed; */
+    background-color: #2f6c8f;
     margin: 0px;
+}
+.nav-link{
+    color: #6f9db5;
+    padding: 10px 5px 5px 10px;
+    font-weight: 400;
+    padding-left: 10px ;
+}
+#signup-modal{
+    /* background-color: #2f6c8f; */
+    color: #ffffff;
+    
+}
+#login-button{
+    background-color: #2f6c8f;
+    color: #ffffff;
+    border-color: #2f6c8f;
+}
+.text-dark{
+    color: #6f9db5;
+    font-style: bold;
 }

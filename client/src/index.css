@@ -38,7 +38,8 @@ h1 {
 
 button:focus,
 button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  outline: 4px auto #2f6c8f;
+  border-color: #2f6c8f;
 }
 
 @media (prefers-color-scheme: light) {

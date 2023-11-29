@@ -10,11 +10,11 @@ function CartBtn() {
         Cart
       </Dropdown.Toggle>
 
-      <Dropdown.Menu>
+      {/* <Dropdown.Menu>
         <Dropdown.Item href="#/action-1">ITEM1</Dropdown.Item>
         <Dropdown.Item href="#/action-2">ITEM2</Dropdown.Item>
         <Dropdown.Item href="#/action-3">ITEM3</Dropdown.Item>
-      </Dropdown.Menu>
+      </Dropdown.Menu> */}
     </Dropdown>
       
     </>
