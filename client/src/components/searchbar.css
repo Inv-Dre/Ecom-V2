@@ -1,15 +1,15 @@
 /* search bar */
 .btn-success {
   display: flex;
-  background-color: blue;
+  background-color: #2f6c8f;
   justify-content: end;
   width: "90%";
 }
 .btn-success:hover {
-  background-color: #0000ff8f;
+  background-color: #6f9db5;
 }
 .btn-success:click {
-  background-color: #0000ff8f;
+  background-color: #6f9db5;
 }
 
 .searchbar {

@@ -18,7 +18,7 @@
  .carousel-inner { /*slideshowSlider */
   white-space: nowrap;
   transition: ease 1000ms;
-  background-color: #3b71ca;
+  background-color: #6f9db5;
 }
 
  .carousel-item { /*slide */
@@ -26,14 +26,17 @@
   height: 200px;
   width: 100%;
   /* border-radius: 40px; */
-  background-color: lightblue;
+  background-color: #6f9db5;
 }
 
 /* Buttons */
 
 .carousel-indicators {
   text-align: center;
-  background-color: #3b71ca;
+  background-color: white;
+  opacity: 60%;
+  margin-left: 0px;
+  margin-right: 0px;
 }
 
 /*
@@ -58,8 +61,11 @@ button:active {
   height: auto;
   display: block;
   margin: 0 auto;
+  width :100%
 }
-/*
+
+
 .text {
-    background-color: #6a0dad;
-} */
+  color: #2f6c8f;
+  background-color: rgb(244, 241, 246);
+}
