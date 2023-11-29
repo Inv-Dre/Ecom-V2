@@ -1,32 +1,33 @@
 const { Schema, model } = require('mongoose');
 const bcrypt = require('bcryptjs');
-
+const Order = require('./Order');
+const Product = require('./Product')
 // import schema from Product.js
 
-const productSchema = new Schema({
-  productName: {
-      type: String,
-      required: true,
-  },
-  price: {
-      type: String,
-      required: true,
-  },
-  quantity: {
-      type: String,
-      required: true,
-  },
-  image: {
-      type: String,
-  },
-  description:{
-      type: String,
-  }, 
-  productId: {
-      type: String,
-      required: true,
-  }
-})
+// const productSchema = new Schema({
+//   productName: {
+//       type: String,
+//       required: true,
+//   },
+//   price: {
+//       type: String,
+//       required: true,
+//   },
+//   quantity: {
+//       type: String,
+//       required: true,
+//   },
+//   image: {
+//       type: String,
+//   },
+//   description:{
+//       type: String,
+//   }, 
+//   productId: {
+//       type: String,
+//       required: true,
+//   }
+// })
 
 const userSchema = new Schema(
   {
@@ -46,7 +47,9 @@ const userSchema = new Schema(
       required: true,
     },
     // set cart to be an array of data from the productSchema
-    cart: [productSchema],
+    cart: [Product.schema],
+    
+    orders: [Order.schema]
   },
   // set this to use virtual below
   {
