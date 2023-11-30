@@ -5,20 +5,56 @@ import Card from "react-bootstrap/Card";
 // import lawnMowerImage from "../assets/lawnmower_stock.jpg";
 // import tennisRacketImage from "../assets/tenni_racket_stock.jpg";
 import "./productCard.css";
+import { useStoreContext } from "../utils/GlobalState";
+import { idbPromise } from "../utils/helpers";
+import { ADD_TO_CART, UPDATE_CART_QUANTITY } from "../utils/actions";
 
-function ProductCard(props) {
+function ProductCard(item) { 
+  const [state, dispatch] = useStoreContext();
+
+  const {
+    image,
+    productName,
+    _id,
+    description,
+    price,
+    quantity
+  } = item;
+
+  const { cart } = state
+
+  const addToCart = () => {
+    const itemInCart = cart.find((cartItem) => cartItem._id === _id)
+    if (itemInCart) {
+      dispatch({
+        type: UPDATE_CART_QUANTITY,
+        _id: _id,
+        purchaseQuantity: parseInt(itemInCart.purchaseQuantity) + 1
+      });
+      idbPromise('cart', 'put', {
+        ...itemInCart,
+        purchaseQuantity: parseInt(itemInCart.purchaseQuantity) + 1
+      });
+    } else {
+      dispatch({
+        type: ADD_TO_CART,
+        product: { ...item, purchaseQuantity: 1 }
+      });
+      idbPromise('cart', 'put', { ...item, purchaseQuantity: 1 });
+    }
+  }
   return (
     <div className="product-container">
       <Card className="product-card" style={{ width: "18rem" }}>
-        <Card.Img className="product-image" variant="top" src={props.image} />
+        <Card.Img className="product-image" variant="top" src={image} />
         <Card.Body>
-          <Card.Title>{props.productName}</Card.Title>
-          <Card.Text> Description: {props.description}
+          <Card.Title>{productName}</Card.Title>
+          <Card.Text> Description: {description}
           </Card.Text>
-          <p>Price: {props.price}</p>
-          <p>Quantity: {props.quantity}</p>
-          <Button className="card-btn" variant="primary">
-            View Product
+          <p>Price: {price}</p>
+          <p>Quantity: {quantity}</p>
+          <Button className="card-btn" onClick={addToCart} variant="primary">
+            Add to Cart
           </Button>
         </Card.Body>
       </Card>

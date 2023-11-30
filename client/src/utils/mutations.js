@@ -24,39 +24,7 @@ export const ADD_USER = gql`
   }
 `;
 
-export const ADD_TO_CART = gql`
-  mutation addToCart($input: AddCartInput!) {
-    addToCart(input: $input) {
-      _id
-      username
-      cart {
-        productName
-        quantity
-        price
-        description
-        image
-        productId
-      }
-    }
-  }
-`;
 
-export const REMOVE_FROM_CART = gql`
-  mutation removeFromCart($productId: ID!) {
-    removeFromCart(productId: $productId) {
-      _id
-      username
-      cart {
-        productName
-        quantity
-        price
-        description
-        image
-        productId
-      }
-    }
-  }
-`;
 
 export const ADD_ORDER = gql`
   mutation addOrder($products: [ID]!) {

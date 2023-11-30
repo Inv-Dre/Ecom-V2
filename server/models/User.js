@@ -46,8 +46,6 @@ const userSchema = new Schema(
       type: String,
       required: true,
     },
-    // set cart to be an array of data from the productSchema
-    cart: [Product.schema],
     
     orders: [Order.schema]
   },
