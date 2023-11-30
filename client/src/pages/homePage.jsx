@@ -74,7 +74,7 @@ export default function HomePage() {
             <ProductCard
               key={product._id}
               _id={product._id}
-              productName={product.productName}
+              name={product.name}
               price={product.price}
               quantity={product.quantity}
               description={product.description}

@@ -14,7 +14,7 @@ function ProductCard(item) {
 
   const {
     image,
-    productName,
+    name,
     _id,
     description,
     price,
@@ -48,7 +48,7 @@ function ProductCard(item) {
       <Card className="product-card" style={{ width: "18rem" }}>
         <Card.Img className="product-image" variant="top" src={image} />
         <Card.Body>
-          <Card.Title>{productName}</Card.Title>
+          <Card.Title>{name}</Card.Title>
           <Card.Text> Description: {description}
           </Card.Text>
           <p>Price: {price}</p>

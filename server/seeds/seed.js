@@ -14,7 +14,7 @@ db.once('open', async ()=> {
       );
     await Product.insertMany([
         {
-           "productName": "Amazon Fire TV 50 inch 4-Series 4K UHD smart TV, stream live TV without cable",
+           "name": "Amazon Fire TV 50 inch 4-Series 4K UHD smart TV, stream live TV without cable",
            "quantity": 250,
            "price":298.99,
            "description":"Display Size:50 inches Refresh Rate:60 hertz Resolution:4K  Model Year:2021",
@@ -23,7 +23,7 @@ db.once('open', async ()=> {
            "category": categories[0]._id
         },
         {
-            "productName": "SAMSUNG Galaxy Tab A8 10.5”",
+            "name": "SAMSUNG Galaxy Tab A8 10.5”",
             "quantity":1000,
             "price":159.99,
             "description":" 64GB Android Tablet, LCD Screen, Kids Content, Smart Switch, US Version, 2022, Pink Gold",
@@ -32,7 +32,7 @@ db.once('open', async ()=> {
             "category": categories[1]._id
         },
         {
-            "productName": "MSI - NVIDIA GeForce RTX 3060 Ventus 3X ",
+            "name": "MSI - NVIDIA GeForce RTX 3060 Ventus 3X ",
             "quantity":450,
             "price":299.99,
             "description":"12G OC - 12GB GDDR6 - PCI Express 4.0 - Graphics Card - Black",
@@ -41,7 +41,7 @@ db.once('open', async ()=> {
             "category": categories[2]._id
         },
         {
-          "productName":  "Microsoft Surface Go 2 (TGF-00001) | 10.5in (1920 x 1280) ",
+          "name":  "Microsoft Surface Go 2 (TGF-00001) | 10.5in (1920 x 1280) ",
           "quantity":250,
           "price":279.00,
           "description":" Touch-Screen | Intel Pentium 4425Y Processor | 4GB RAM | 64GB eMMC Storage | Windows 10 Pro | Platinum",
@@ -50,7 +50,7 @@ db.once('open', async ()=> {
           "category": categories[1]._id
         },
         {
-            "productName":  "CyberPowerPC - Gamer Master Gaming Desktop - AMD Ryzen 5 7600",
+            "name":  "CyberPowerPC - Gamer Master Gaming Desktop - AMD Ryzen 5 7600",
             "quantity":40,
             "price":899.99,
             "description":" 16GB Memory - NVIDIA GeForce RTX 4060 8GB - 2TB SSD - White",
@@ -59,7 +59,7 @@ db.once('open', async ()=> {
             "category": categories[2]._id
         },
         {
-            "productName": "test mouse",
+            "name": "test mouse",
             "quantity":100,
             "price":25.00,
             "description":"basic black mouse without any extra buttons",
@@ -68,7 +68,7 @@ db.once('open', async ()=> {
             "category": categories[4]._id
         },
         {
-            "productName": "Amazon - Fire HD 10 - 10.1 Tablet  - 32GB - Black",
+            "name": "Amazon - Fire HD 10 - 10.1 Tablet  - 32GB - Black",
             "quantity":75,
             "price":80.00,
             "description":"Clearer, sharper images and graphics, Ideal for movies and most games",
@@ -77,7 +77,7 @@ db.once('open', async ()=> {
             "category": categories[1]._id
         },
         {
-            "productName": "PNY - NVIDIA GeForce GT 710 2GB PCI Express 2.0 Graphics Card",
+            "name": "PNY - NVIDIA GeForce GT 710 2GB PCI Express 2.0 Graphics Card",
             "quantity":50,
             "price":54.99,
             "description":"WITH GPU Base Clock Frequency0.954 gigahertz",
@@ -86,7 +86,7 @@ db.once('open', async ()=> {
             "category": categories[3]._id
         },
         {
-            "productName": "Lenovo - Tab M10 Plus ",
+            "name": "Lenovo - Tab M10 Plus ",
             "quantity":50,
             "price":209,
             "description":"(3rd Gen) - 10.61inch - Tablet - 64GB - Storm Grey",
@@ -95,7 +95,7 @@ db.once('open', async ()=> {
             "category": categories[1]._id
         },
         {
-            "productName": "Amazon Fire Max 11 tablet ",
+            "name": "Amazon Fire Max 11 tablet ",
             "quantity":50,
             "price":199,
             "description":"all-in-one for streaming, reading, and gaming, 14-hour battery life, optional stylus and keyboard, 128 GB, Gray, without lockscreen ads",
@@ -104,7 +104,7 @@ db.once('open', async ()=> {
             "category": categories[1]._id
         },
         {
-            "productName": "Samsung - Galaxy Tab S7  ",
+            "name": "Samsung - Galaxy Tab S7  ",
             "quantity":100,
             "price":399,
             "description":"64GB - Wi-Fi - with S-Pen - Mystic Black",
@@ -113,7 +113,7 @@ db.once('open', async ()=> {
             "category": categories[1]._id
         },
         {
-            "productName": "Samsung 43inch 4K UHD TV  ",
+            "name": "Samsung 43inch 4K UHD TV  ",
             "quantity":100,
             "price":749.00,
             "description":"it includes Xbox One S 500GB Console Bundle",
@@ -122,7 +122,7 @@ db.once('open', async ()=> {
             "category": categories[0]._id
         },
         {
-            "productName": "TCL - 32inch  ",
+            "name": "TCL - 32inch  ",
             "quantity":100,
             "price":129.99,
             "description":"Class S3 S-Class 1080p FHD HDR LED Smart TV with Google TV",
@@ -131,7 +131,7 @@ db.once('open', async ()=> {
             "category": categories[0]._id
         },
         {
-            "productName": "Hisense - 32inch  ",
+            "name": "Hisense - 32inch  ",
             "quantity":550,
             "price":89.99,
             "description":"Class A4 Series LED HD Smart Vidaa TV",
@@ -140,7 +140,7 @@ db.once('open', async ()=> {
             "category": categories[1]._id
         },
         {
-            "productName": "Sony QD-OLED 65 inch  ",
+            "name": "Sony QD-OLED 65 inch  ",
             "quantity":50,
             "price":3298.00,
             "description":"BRAVIA XR A95L Series 4K Ultra HD TV: Smart Google TV with Dolby Vision HDR",
@@ -149,7 +149,7 @@ db.once('open', async ()=> {
             "category": categories[1]._id
         },
         {
-            "productName": "Toshiba - 32inches   ",
+            "name": "Toshiba - 32inches   ",
             "quantity":300,
             "price":89.99,
             "description":"Class V35 Series LED HD Smart VIDAA TV",
@@ -158,7 +158,7 @@ db.once('open', async ()=> {
             "category": categories[1]._id
         },
         {
-            "productName": "Samsung - 43inches  ",
+            "name": "Samsung - 43inches  ",
             "quantity":300,
             "price":259.99,
             "description":"Class CU7000 Crystal UHD 4K Smart Tizen TV",
@@ -167,7 +167,7 @@ db.once('open', async ()=> {
             "category": categories[1]._id
         },
         {
-            "productName": "PNY - NVIDIA GeForce GTX 1650 4GB GDDR6 PCI Express 3.0 Graphics Card  ",
+            "name": "PNY - NVIDIA GeForce GTX 1650 4GB GDDR6 PCI Express 3.0 Graphics Card  ",
             "quantity":300,
             "price":189.99,
             "description":"with Dual Fan - Black",
@@ -176,7 +176,7 @@ db.once('open', async ()=> {
             "category": categories[3]._id
         },
         {
-            "productName": "XFX - AMD Radeon RX 580 GTS XXX  ",
+            "name": "XFX - AMD Radeon RX 580 GTS XXX  ",
             "quantity":120,
             "price":139.99,
             "description":"8GB GDDR5 PCI Express 3.0 Graphics Card - Black",
@@ -185,7 +185,7 @@ db.once('open', async ()=> {
             "category": categories[3]._id
         },
         {
-            "productName": "GIGABYTE - NVIDIA GeForce RTX 3060 12GB GDDR6 PCI Express 4.0 Graphics Card  ",
+            "name": "GIGABYTE - NVIDIA GeForce RTX 3060 12GB GDDR6 PCI Express 4.0 Graphics Card  ",
             "quantity":200,
             "price":289.99,
             "description":"Color-Black",
@@ -194,7 +194,7 @@ db.once('open', async ()=> {
             "category": categories[3]._id
         },
         {
-            "productName": "Logitech - Lift Vertical Wireless Ergonomic Mouse with 4 Customizable Buttons  ",
+            "name": "Logitech - Lift Vertical Wireless Ergonomic Mouse with 4 Customizable Buttons  ",
             "quantity":1000,
             "price":66.99,
             "description":"Color- Graphite",
@@ -203,7 +203,7 @@ db.once('open', async ()=> {
             "category": categories[4]._id
         },
         {
-            "productName": "Dell Mobile Wireless Mouse – MS3320W  ",
+            "name": "Dell Mobile Wireless Mouse – MS3320W  ",
             "quantity":1000,
             "price":23.00,
             "description":"Color- Grey",
@@ -212,7 +212,7 @@ db.once('open', async ()=> {
             "category": categories[4]._id
         },
         {
-            "productName": "Logitech - M100 Wired Optical Ambidextrous PC Mouse with 1000 DPI Optical Tracking   ",
+            "name": "Logitech - M100 Wired Optical Ambidextrous PC Mouse with 1000 DPI Optical Tracking   ",
             "quantity":1000,
             "price":9.99,
             "description":"Color- Gray",
@@ -221,7 +221,7 @@ db.once('open', async ()=> {
             "category": categories[4]._id
         },
         {
-            "productName": "CORSAIR - Scimitar RGB Elite Wired Optical Gaming Mouse",
+            "name": "CORSAIR - Scimitar RGB Elite Wired Optical Gaming Mouse",
             "quantity":1000,
             "price":60.99,
             "description":"with 17 Programmable Buttons - Black",
@@ -230,7 +230,7 @@ db.once('open', async ()=> {
             "category": categories[4]._id
         },
         {
-            "productName": "Microsoft - Surface Arc Wireless BlueTrack Ambidextrous Mouse",
+            "name": "Microsoft - Surface Arc Wireless BlueTrack Ambidextrous Mouse",
             "quantity":1000,
             "price":79.99,
             "description":"Color - Grey",
