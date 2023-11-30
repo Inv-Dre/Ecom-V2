@@ -38,7 +38,7 @@ db.once('open', async ()=> {
             "description":"12G OC - 12GB GDDR6 - PCI Express 4.0 - Graphics Card - Black",
             "image":"https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6452/6452940_sd.jpg;maxHeight=640;maxWidth=550",
             "productId":"3",
-            "category": categories[2]._id
+            "category": categories[3]._id
         },
         {
           "name":  "Microsoft Surface Go 2 (TGF-00001) | 10.5in (1920 x 1280) ",
@@ -137,7 +137,7 @@ db.once('open', async ()=> {
             "description":"Class A4 Series LED HD Smart Vidaa TV",
             "image":"https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6542/6542601_sd.jpg;maxHeight=640;maxWidth=550",
             "productId":"14",
-            "category": categories[1]._id
+            "category": categories[0]._id
         },
         {
             "name": "Sony QD-OLED 65 inch  ",
@@ -146,7 +146,7 @@ db.once('open', async ()=> {
             "description":"BRAVIA XR A95L Series 4K Ultra HD TV: Smart Google TV with Dolby Vision HDR",
             "image":"https://m.media-amazon.com/images/I/91FLVbv6qhL._AC_SX679_.jpg",
             "productId":"15",
-            "category": categories[1]._id
+            "category": categories[0]._id
         },
         {
             "name": "Toshiba - 32inches   ",
@@ -155,7 +155,7 @@ db.once('open', async ()=> {
             "description":"Class V35 Series LED HD Smart VIDAA TV",
             "image":"https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6544/6544757_sd.jpg;maxHeight=640;maxWidth=550",
             "productId":"16",
-            "category": categories[1]._id
+            "category": categories[0]._id
         },
         {
             "name": "Samsung - 43inches  ",
@@ -164,7 +164,7 @@ db.once('open', async ()=> {
             "description":"Class CU7000 Crystal UHD 4K Smart Tizen TV",
             "image":"https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6537/6537422_sd.jpg;maxHeight=640;maxWidth=550",
             "productId":"17",
-            "category": categories[1]._id
+            "category": categories[0]._id
         },
         {
             "name": "PNY - NVIDIA GeForce GTX 1650 4GB GDDR6 PCI Express 3.0 Graphics Card  ",
