@@ -1,20 +1,17 @@
-import SearchBar from "../components/searchBar";
-import Slideshow from "../components/slideShow";
+import SearchBar from "../components/SearchBar";
+import Slideshow from "../components/SlideShow";
 // import CartBtn from "../components/cart";
-import ProductCard from "../components/productCard";
-import { useQuery } from '@apollo/client';
+import ProductCard from "../components/ProductCard";
+import { useQuery } from "@apollo/client";
 import { QUERY_PRODUCTS } from "../utils/queries";
-import Cart from '../components/Cart/index'
+import Cart from "../components/Cart/index";
 import { useStoreContext } from "../utils/GlobalState";
 import { idbPromise } from "../utils/helpers";
 import { UPDATE_PRODUCTS } from "../utils/actions";
 import { useEffect } from "react";
 import CategoryMenu from "../components/CategoryMenu";
 
-
 export default function HomePage() {
-  
-
   // if (loading) {
   //   return <p>Loading...</p>;
   // }
@@ -36,10 +33,10 @@ export default function HomePage() {
         products: data.products,
       });
       data.products.forEach((product) => {
-        idbPromise('products', 'put', product);
+        idbPromise("products", "put", product);
       });
     } else if (!loading) {
-      idbPromise('products', 'get').then((products) => {
+      idbPromise("products", "get").then((products) => {
         dispatch({
           type: UPDATE_PRODUCTS,
           products: products,
@@ -66,21 +63,20 @@ export default function HomePage() {
         <SearchBar />
         <Cart />
         <Slideshow />
-        <CategoryMenu/>
+        <CategoryMenu />
       </div>
-      <div className='flex-container'>
-        {
-          filterProducts().map((product) => (
-            <ProductCard
-              key={product._id}
-              _id={product._id}
-              name={product.name}
-              price={product.price}
-              quantity={product.quantity}
-              description={product.description}
-              image={product.image}
-            />
-          ))}
+      <div className="flex-container">
+        {filterProducts().map((product) => (
+          <ProductCard
+            key={product._id}
+            _id={product._id}
+            name={product.name}
+            price={product.price}
+            quantity={product.quantity}
+            description={product.description}
+            image={product.image}
+          />
+        ))}
       </div>
     </>
   );
